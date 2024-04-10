@@ -1,5 +1,29 @@
-.pendu{
+body {
+    background-image: url("background.jpeg");
+    background-color: rgba(255, 255, 255, 0.856);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.container-pendu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.pendu {
     width: 75px;
     height: 200px;
     background-image: url("./man.png");
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+#letters_container {
+    margin-top: 3rem;
 }
