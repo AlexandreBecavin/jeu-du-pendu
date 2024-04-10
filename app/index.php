@@ -38,6 +38,14 @@
         </div>
     </div>
 
+    <div id="gameWinModal" style="display:none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+        <div style="background-color: #fefefe; margin: 10% auto; padding: 20px; border-radius: 10px; width: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h2 style="color: #333;">Fin du Jeu</h2>
+            <p style="font-size: 18px; color: #555;">Vous avez gagné</p>
+            <button onclick="resetGame()" style="font-size: 18px; padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Réessayer</button>
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./pendu.js"></script>
