@@ -17,7 +17,6 @@ function show_letter() {
             letters_container_html += "<span style='margin: 10px'>_</span>"
         }else {
             letters_container_html += word_to_find.charAt(i);
-            // letters_container_html += "<span style='margin: 10px'>" + word_to_find.charAt(i) + "</span>";
         }
     }
     $('#letters_container').html(letters_container_html);
@@ -30,16 +29,14 @@ function change_sprite() {
 
 //function afficher les lettres ratées
 function success(){
-    if (number_of_success == word_to_find.length){
-        $('#gameOverModal').show();
+    if (number_of_success == word_to_find.length - 1){
+        $('#gameWinModal').show();
     }
 }
 
 
 function displayRandomLetter() {
     var last_letter = submited_letters[submited_letters.length - 1];
-    console.log(submited_letters)
-    console.log(submited_letters.indexOf(last_letter))
 
     if (last_letter && $.inArray(last_letter, submited_letters.slice(0, -1) === -1)  && submited_letters.includes(last_letter) ) {
         var last_letter =  $('#letter').val().toUpperCase();
@@ -95,7 +92,6 @@ function input_reception() {
 
             change_sprite();
             $('#letter').val('');
-            wrong_letters();
         }
         else {
             $('#letter').val('');
@@ -112,7 +108,7 @@ function resetGame() {
     number_of_success = 0;
     number_of_errors = 0;
 
-    $('#gameOverModal').hide();
+    $('#gameWinModal').hide();
     $('#gameLostModal').hide();
 
     show_letter();
