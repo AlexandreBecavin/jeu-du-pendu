@@ -10,5 +10,9 @@
 * Si le pendu est complet, le joueur perd.
 * Si toutes les bonnes lettres sont devinées avant la pendaison totale, le joueur gagne. 
 
+## Installation du projet
+Installer [docker-compose](https://docs.docker.com/compose/install/)
 
+lancer le projet avec la commande `docker-compose up -d`
 
+Jouer au pendu sur l'url [http://localhost:80](http://localhost:80)
